@@ -1,0 +1,26 @@
+# setup.sh
+#!/bin/bash
+
+echo "Installing dependencies..."
+pip install -r requirements.txt
+echo "Dependencies installed."
+
+// deploy.sh
+# deploy.sh
+#!/bin/bash
+
+echo "Starting Eco-Power prototype deployment..."
+
+echo "Running emission filtration..."
+python3 src/emission_filtration.py
+
+echo "Running biogas production..."
+python3 src/biogas_production.py
+
+echo "Producing pest control product..."
+python3 src/pest_control.py
+
+echo "Sending data to cloud analytics..."
+python3 src/cloud_analytics.py
+
+echo "Deployment completed."
